@@ -1,0 +1,58 @@
+body {
+    background: #2a80b9;
+  }
+  .container {
+    width: 70px;
+    height: 70px;
+    overflow: hidden;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .container .box {
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    border-radius: 3px;
+    animation: walk 0.5s cubic-bezier(0.7, 0, 0.3, 1) infinite;
+    position: absolute; 
+    margin: auto;
+    left: -9999px;
+    right: -9999px;
+    top: -9999px;
+    bottom: -9999px;
+    
+  }
+  .walkway, .walkway:before, .walkway:after {
+    width: 6px;
+    border-radius: 1px;
+    height: 6px;
+    background: #fff;
+    position: absolute;
+    top: 62px;
+    left: 52px;
+  }
+  .walkway:before {
+    content: '';
+    top: 0;
+    left: -40px;
+  }
+  .walkway:after {
+    content: '';
+    top: 0;
+    left: 40px;
+  }
+  .walkway {
+    animation: walkway 0.5s cubic-bezier(0.7, 0, 0.3, 1) infinite;
+  }
+  @keyframes walkway {
+    to {
+      transform: translate(-40px);
+    }
+  }
+  @keyframes walk {
+    to {
+      transform: rotate(90deg);
+    }
+  }
